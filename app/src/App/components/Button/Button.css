@@ -1,0 +1,18 @@
+.Button{
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: orange;
+    background-color: skyblue;
+    font-weight : 900;
+    font-size : large;
+    border : none;
+    margin-left: 9px;
+}
+.Button img{
+    max-height: 64px;
+}
+
+.clicked {
+    box-shadow: 10px 10px 25px gray;
+}
