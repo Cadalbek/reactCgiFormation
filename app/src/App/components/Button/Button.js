@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
 function Button(props) {
     //console.log(props);
+    const [clicked, setclicked] = useState(false);
     return <button onClick={evt=>{
-        console.log('Clickage sur un bouton');
+        setclicked(true)
+        setTimeout(()=>{
+            setclicked(false)
+        },700)
+        //console.log('Clickage sur un bouton');
         props.lorsqueJeCliqueraiSurLeButton(evt.target.innerHTML);
     }} 
-    className="Button clicked" 
+    className={"Button" + (clicked? ' clicked': '')}
     style={{backgroundColor: props.bgcolor}}>
     {props.children}
     </button>;
-    
 }
 
 // Ca va servir a creer un systeme pour documenter et bien travailler dans une équipe + vérifier + autocomplétion
