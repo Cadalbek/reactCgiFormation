@@ -16,23 +16,33 @@ const MemeForm = (props) => {
           <label htmlFor="titre">Titre</label><br /><input onChange={evt=>{
             setstate({...state, titre:evt.target.value})
           }} value={state.titre} type="text" id="titre" placeholder="saisissez le titre" />
+
           <hr />
+
           <label htmlFor="image">image</label><br /><select value={state.image} id="image"><option onChange={evt=>{
             setstate({...state, image:evt.target.value})
-          }} value="1">img.jpg</option></select>
+          }} value={state.image}>img.jpg</option></select>
+
           <hr />
+
           <label htmlFor="text">Texte</label><br /><input onChange={evt=>{
             setstate({...state, text:evt.target.value})
           }} value={state.text} type="text" id="text" />
+
           <div style={{ textAlign: 'center' }}>
+
             <div style={{ display: 'inline-block' }}><label htmlFor="x">X </label><br /><input onChange={evt=>{
             setstate({...state, x:evt.target.value})
           }} value={state.x} type="number" id="x" /></div>
+
             <div style={{ display: 'inline-block' }}><label htmlFor="y">Y</label><br /><input onChange={evt=>{
             setstate({...state, y:evt.target.value})
           }} value={state.y} type="number" id="y" /></div>
+
           </div>
+
           <hr />
+
           <input type="submit" value="Save"></input>
           <input type="reset" value="Reset"></input>
 
